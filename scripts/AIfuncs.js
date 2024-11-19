@@ -392,6 +392,15 @@ function safeAndMayKill(board, kings, player, row, col) {
     }
 
 }
+function isKing(player, position, kings) {
+    for (let king of kings) {
+        if (king[0] === player && king[1][0] === position[0] && king[1][1] === position[1]) {
+            return true;
+        }
+    }
+    return false;
+}
+
 
 function inDanger_safe(board, player) {
     //count [inDanger, safe]
