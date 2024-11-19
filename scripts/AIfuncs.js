@@ -666,6 +666,12 @@ function removeKing(kings, killedloc, player) {
     }
 
 }
+function logBoardState(board) {
+    for (let row of board) {
+        console.log(row.join(" "));
+    }
+}
+
 
 function updateKingLoc(kings, player, pastlocation, nextlocation) {
     for (let i = 0; i < kings.length; i++) {
@@ -677,6 +683,12 @@ function updateKingLoc(kings, player, pastlocation, nextlocation) {
         }
     }
 }
+
+function indexToPosition(row, col) {
+    const letters = "ABCDEFGH";
+    return `${letters[col]}${row + 1}`;
+}
+
 
 function findMovePlayer(locC, locT, temMvs) {
     for (let i = 0; i < temMvs.length; i++) {
