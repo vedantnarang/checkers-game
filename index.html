@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Checkers</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="CSS/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="crown-solid.svg" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+ 
+    <script src="scripts/board.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/AIfuncs.js"></script>
+    <script src="scripts/Checker.js"></script>
+    <script src="scripts/Tile.js"></script>
+    <script src="scripts/game.js"></script>
+    
+</head>
+<body>
+    <div class="column">
+        <div id="dis">
+            <h1 > Checkers! </h1>
+            
+            <i id = "winneri" style="display: none; font-size: 35px;" class="fas fa-trophy"></i>
+            <h1 id="winner" style="display: none;"> </h1>
+            <h2 id="start" style="font-size: 30px;"> Start Game </h2>
+            <p> 
+            <button style="display: inline;" id = "one" onclick="myGame.onePlayer()">One Player</button>
+            <button style="display: inline;" id = "two" onclick="myGame.twoPlayers()">Two Players</button>
+            </p>
+            <p  id="count">
+                <h2 style="display: none;" id="red">Red tiles: <label id="redcount">12</label></h2>
+                <h2 style="display: none;" id="blue">Blue Tiles: <label id="bluecount">12</label></h2>
+            </p>
+            <p class="res">
+                <button id = "reset" onclick="location.reload();">Restart Game</button>
+            </p>
+            
+        </div>  
+    
+        
+    </div>
+
+    <div id="board">
+        <div class="tiles"></div>
+    </div>
+
+    <div class="column">
+        <h1 style="display: none;" id="turn" ></h1>
+    </div>
+</body>
+
+
+</html>
