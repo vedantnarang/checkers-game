@@ -700,6 +700,12 @@ function findMovePlayer(locC, locT, temMvs) {
     }
 
 }
+function getRandomMove(moves) {
+    if (moves.length === 0) return null;
+    const index = Math.floor(Math.random() * moves.length);
+    return moves[index];
+}
+
 
 function isValidMove(locC, locT, temMvs) {
     for (let i = 0; i < temMvs.length; i++) {
